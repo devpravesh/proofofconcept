@@ -2,7 +2,8 @@
 
 A new Flutter project.
 
-## Getting Started![Simulator Screen Recording - iPhone 11 Pro - 2022-05-30 at 13 13 27](https://user-images.githubusercontent.com/88076276/170942718-512e1d83-b544-462d-9be6-b8163c4a5fc8.gif)
+## Getting Started!
+[Simulator Screen Recording - iPhone 11 Pro - 2022-05-30 at 13 13 27](https://user-images.githubusercontent.com/88076276/170942718-512e1d83-b544-462d-9be6-b8163c4a5fc8.gif)
 
 
 
