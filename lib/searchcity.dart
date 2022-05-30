@@ -25,13 +25,11 @@ class _SearchPageState extends State<SearchPage> {
   void initState() {
     super.initState();
 
-    // Start listening to changes.
     myController.text = _controller.selectedcity.value;
   }
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
     myController.dispose();
     super.dispose();
   }

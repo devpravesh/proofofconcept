@@ -1,9 +1,34 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:proofofconecpt/model.dart';
 import 'package:proofofconecpt/searchcity.dart';
+import 'package:proofofconecpt/services.dart';
 import 'package:proofofconecpt/valuestoring.dart';
 
-import 'main.dart';
+class Fetching extends GetxController {
+  Rxn<Poc> responcelist = Rxn<Poc>();
+  var isLoading = true.obs;
+  @override
+  void onInit() {
+    fetchdetails();
+    // getSum();
+    super.onInit();
+  }
+
+  void fetchdetails() async {
+    isLoading(true);
+    try {
+      var orderList = await Services.pocservices();
+      if (orderList.isBlank != null) {
+        responcelist.value = orderList;
+      }
+    } finally {
+      isLoading(false);
+    }
+  }
+}
 
 class CustomSearchDelegate extends SearchDelegate {
   StoredValue _controller = Get.find<StoredValue>();
